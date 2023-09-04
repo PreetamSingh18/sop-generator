@@ -162,12 +162,25 @@ margin: auto;
     color: white;
 }
 
+svg.MuiSvgIcon-root.MuiSvgIcon-fontSizeMedium.MuiStepIcon-root.Mui-completed.css-1u4zpwo-MuiSvgIcon-root-MuiStepIcon-root{
+    color: #5cb85c;
+}
+
 
 @media  (max-width: 768px) {
-    span.MuiStepLabel-labelContainer.css-1vyamtt-MuiStepLabel-labelContainer{
+    /* span.MuiStepLabel-labelContainer.css-1vyamtt-MuiStepLabel-labelContainer{
+        display: none;
+    } */
+    /* span.MuiStepLabel-label.Mui-disabled.css-2fdkz6{ */
+    span.MuiStepLabel-label.Mui-active.css-1hv8oq8-MuiStepLabel-label {
         display: none;
     }
-
+    span.MuiStepLabel-label.Mui-disabled.css-1hv8oq8-MuiStepLabel-label{
+display: none;
+    }
+    span.MuiStepLabel-label.Mui-completed.css-1hv8oq8-MuiStepLabel-label{
+        display: none;
+    }
    input{
     width: 60%;
    }
