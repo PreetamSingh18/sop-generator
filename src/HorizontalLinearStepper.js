@@ -15,6 +15,8 @@ import { Context } from './Contexts';
 import { useContext } from 'react';
 import emailjs from '@emailjs/browser';
 import { getCardContentUtilityClass } from '@mui/material';
+// import { makeStyles } from '@mui/material';
+// import { makeStyles } from '@mui/styles/makeStyles';
 
 const steps = ['Personal Information', 'Education', 'Work Experience','SOP Details','Languages','Fee Information'];
 const stepsNo=[3,6,9,13,17,21];
@@ -108,10 +110,19 @@ export default function HorizontalLinearStepper() {
       feegic:"",
     })
   };
+  // const useStyles = makeStyles(() => ({
+  //   root: {
+  //     // "& .MuiStepIcon-active": { color: "red" },
+  //     "& .MuiStepIcon-completed": { color: "green" },
+  //     // "& .Mui-disabled .MuiStepIcon-root": { color: "cyan" }
+  //   }
+  // }));
+
+  // const c = useStyles();
 
   return (
     <Box sx={{ width: '100%' }}>
-      <Stepper activeStep={activeStep}>
+      <Stepper  activeStep={activeStep}>
         {steps.map((label, index) => {
           const stepProps = {};
           const labelProps = {};
@@ -124,7 +135,9 @@ export default function HorizontalLinearStepper() {
             stepProps.completed = false;
           }
           return (
-            <Step key={label} {...stepProps}>
+            <Step sx={ { '& .MuiStepLabel-root .Mui-completed': {
+            color: 'green', // circle color (COMPLETED)
+          },}} key={label} {...stepProps}>
               <StepLabel {...labelProps}>{label}</StepLabel>
             </Step>
           );
@@ -134,7 +147,7 @@ export default function HorizontalLinearStepper() {
         <React.Fragment>
           <Typography sx={{ mt: 2, mb: 1 }}>
             All steps completed - your response saved and sent to your registered email id.
-            
+
           </Typography>
           <Box sx={{ display: 'flex', flexDirection: 'row', pt: 2 }}>
             <Box sx={{ flex: '1 1 auto' }} />
