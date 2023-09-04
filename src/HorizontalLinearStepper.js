@@ -164,7 +164,8 @@ export default function HorizontalLinearStepper() {
               </Button>
             )} */}
 
-            <Button onClick={handleNext} disabled={activeStep !== count}>
+            {/* disabled={activeStep !== count} */}
+            <Button onClick={handleNext} >
               {activeStep === steps.length - 1 ? 'Finish' : 'Next'}
             </Button>
           </Box>

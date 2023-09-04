@@ -35,32 +35,49 @@ const Fee = () => {
   };
 
   return (
-    <div>
- <h2>Fee Details</h2>
+    <div className="Box1">
+ <h2 className="subheading">Fee Details</h2>
     <form>
-        <div>
+        <div className='RadioInputs'>
             <label> Did you pay your first year tuition : </label>
+            <div>
+            <div>
+
             <input type="radio" id="Yes" name="feepaid" value="Yes" onChange={handleInput}/>
              <label for="Yes">Yes</label>
+            </div>
+            <div>
+
              <input type="radio" id="No" name="feepaid" value="No"  onChange={handleInput}/>
              <label for="No">No</label>
+            </div>
+            </div>
         </div>
 
-        <div>
-            <label>How much tuition fee did you pay: </label>
-            <input type="number" min={0} value={user.feeamount} name="feeamount" onChange={handleInput} />
+        <div className="InputBOX">
+            {/* <label>How much tuition fee did you pay: </label> */}
+            <input placeholder='Tuition fee amount that you paid' type="number" min={0} value={user.feeamount} name="feeamount" onChange={handleInput} />
         </div>
-        <div>
+        <div className='RadioInputs' >
             <label>Did you do a GIC: </label>
+            <div>
+          <div>
+
             <input type="radio" id="Yes" name="gic" value="Yes" onChange={handleInput}/>
              <label for="Yes">Yes</label>
+          </div>
+          <div>
+
              <input type="radio" id="No" name="gic" value="No"  onChange={handleInput}/>
              <label for="No">No</label>
+          </div>
+            </div>
         </div>
-        <div>
-            <label>How much did you pay towards GIC: </label>
-            <input type="number" min={0} value={user.feegic} name="feegic" onChange={handleInput}/>
+        <div className="InputBOX">
+            {/* <label>How much did you pay towards GIC: </label> */}
+            <input placeholder='Amount paid towards GIC' type="number" min={0} value={user.feegic} name="feegic" onChange={handleInput}/>
         </div>
+<div className="btnBOX">
 
  <button
           type="submit"
@@ -72,6 +89,7 @@ const Fee = () => {
         >
           Save
         </button>
+</div>
 
     </form>
 

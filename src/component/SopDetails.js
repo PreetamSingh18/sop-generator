@@ -35,26 +35,28 @@ const SopDetails = () => {
   };
 
   return (
-    <div>
-    <h2>SOP Details</h2>
+    <div className="Box1">
+    <h2 className="subheading">SOP Details</h2>
     <form>
-        <div>
-            <label> Canada Institute Name: </label>
-            <input type="text" value={user.cinstitute} name="cinstitute" onChange={handleInput}/>
+        <div className="InputBOX">
+            {/* <label> Canada Institute Name: </label> */}
+            <input placeholder='Canada Institute Name' type="text" value={user.cinstitute} name="cinstitute" onChange={handleInput}/>
         </div>
 
-        <div>
-            <label>Course Enrolled: </label>
-            <input type="text" value={user.courseenroll} name="courseenroll" onChange={handleInput}/>
+        <div className="InputBOX">
+            {/* <label>Course Enrolled: </label> */}
+            <input placeholder='Course Enrolled' type="text" value={user.courseenroll} name="courseenroll" onChange={handleInput}/>
         </div>
-        <div>
-            <label>Country: </label>
-            <input type="text" value={user.country} name="country" onChange={handleInput}/>
+        <div className="InputBOX">
+            {/* <label>CountryCountry: </label> */}
+            <input placeholder='Country' type="text" value={user.country} name="country" onChange={handleInput}/>
         </div>
-        <div>
-            <label>Future Goal: </label>
-            <input type="text" value={user.goal} name="goal"  onChange={handleInput}/>
+        <div className="InputBOX">
+            {/* <label>Future Goal: </label> */}
+            <input placeholder='Future Goals' type="text" value={user.goal} name="goal"  onChange={handleInput}/>
         </div>
+        <div className='btnBOX'>
+
  <button
           type="submit"
           id="submit-form"
@@ -65,6 +67,7 @@ const SopDetails = () => {
         >
           Save
         </button>
+        </div>
 
 
     </form>

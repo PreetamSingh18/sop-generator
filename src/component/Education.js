@@ -32,13 +32,13 @@ const Education = () => {
     console.log(count);
   };
   return (
-    <div>
-    <h2>Education Details</h2>
+    <div className="Box1">
+    <h2 className="subheading">Education Details</h2>
     <form>
-        <div>
-            <label>Highest Level of Education: </label>
+        <div className="InputBOX">
+            {/* <label>Highest Level of Education: </label> */}
             <select name='education' onChange={handleInput}>
-            <option value="" >Select option</option>
+            <option value="" >Select your Highest Level of Education</option>
   <option value="Grade 12">Grade 12</option>
   <option value="Diploma">Diploma</option>
   <option value="Bachelors Degree">Bachelors Degree</option>
@@ -46,16 +46,18 @@ const Education = () => {
   <option value="PhD">PhD</option>
 </select>
         </div>
-        <div>
-            <label>Institute Name: </label>
-            <input type="text" value={user.institute} name="institute" onChange={handleInput}/>
+        <div className="InputBOX">
+            {/* <label>Institute Name: </label> */}
+            <input placeholder='Institute Name' type="text" value={user.institute} name="institute" onChange={handleInput}/>
         </div>
 
-        <div>
-            <label>Course: </label>
-            <input type="text" value={user.course} name="course" onChange={handleInput} />
+        <div className="InputBOX">
+            {/* <label>Course: </label> */}
+            <input placeholder='Course' type="text" value={user.course} name="course" onChange={handleInput} />
         </div>
          {/* <button type='submit' id="save-button">Save</button> */}
+        <div className='btnBOX'>
+
          <button
           type="submit"
           id="submit-form"
@@ -66,6 +68,7 @@ const Education = () => {
         >
           Save
         </button>
+        </div>
     </form>
 
     </div>

@@ -37,9 +37,10 @@ const Personal = () => {
     <div className="Box1">
       <h2 className="subheading">Personal Details</h2>
       <form id="myForm">
-        <div>
-          <label>Full Name: </label>
+        <div className="InputBOX">
+          {/* <label>Full Name: </label> */}
           <input
+          placeholder="Full Name"
             type="text"
             name="name"
             id="name"
@@ -48,9 +49,10 @@ const Personal = () => {
             required
           />
         </div>
-        <div>
-          <label>Email Id: </label>
+        <div className="InputBOX">
+          {/* <label>Email Id: </label> */}
           <input
+          placeholder="Email Id"
             type="email"
             name="email"
             id="email"
@@ -60,9 +62,10 @@ const Personal = () => {
           />
         </div>
 
-        <div>
-          <label>Age: </label>
+        <div className="InputBOX">
+          {/* <label>Age: </label> */}
           <input
+          placeholder="Age"
             type="number"
             min="1"
             name="age"
@@ -73,6 +76,8 @@ const Personal = () => {
           />
         </div>
         {/* <button type='submit' id="save-button">Save</button> */}
+       <div className="btnBOX">
+
         <button
           type="submit"
           id="submit-form"
@@ -83,6 +88,7 @@ const Personal = () => {
         >
           Save
         </button>
+       </div>
       </form>
     </div>
   );

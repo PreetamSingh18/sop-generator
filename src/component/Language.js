@@ -24,7 +24,7 @@ const Language = () => {
     else if(user.espeaking===""){
       alert("Enter Speaking Score");
     }
-    else if(user.ewriting){
+    else if(user.ewriting===""){
       alert("Enter Writing Score")
     }
 
@@ -35,11 +35,11 @@ const Language = () => {
   };
 
   return (
-    <div>
-      <h2>Language</h2>
+    <div className="Box1">
+      <h2 className="subheading">Language</h2>
       <div>
         <h5>Rate your English </h5>
-        <div>
+        <div className="SlideBOX">
           <label>Listening</label>
           <Slider
             aria-label="Custom marks"
@@ -53,7 +53,7 @@ const Language = () => {
             onChange={handleInput}
           />
         </div>
-        <div>
+        <div className="SlideBOX">
           <label>Reading</label>
           <Slider
             aria-label="Custom marks"
@@ -67,7 +67,7 @@ const Language = () => {
             onChange={handleInput}
           />
         </div>
-        <div>
+        <div className="SlideBOX">
           <label>Speaking</label>
           <Slider
             aria-label="Custom marks"
@@ -81,7 +81,7 @@ const Language = () => {
             onChange={handleInput}
           />
         </div>
-        <div>
+        <div className="SlideBOX">
           <label>Writing</label>
           <Slider
             aria-label="Custom marks"
@@ -96,6 +96,8 @@ const Language = () => {
           />
         </div>
          {/* <button type='submit' id="save-button">Save</button> */}
+        <div className="btnBOX">
+
          <button
           type="submit"
           id="submit-form"
@@ -106,6 +108,7 @@ const Language = () => {
         >
           Save
         </button>
+        </div>
       </div>
     </div>
   );

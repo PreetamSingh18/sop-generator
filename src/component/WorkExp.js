@@ -30,22 +30,24 @@ const WorkExp = () => {
     console.log(count);
   };
   return (
-    <div>
-    <h2>Work Experience </h2>
+    <div className="Box1">
+    <h2 className="subheading">Work Experience </h2>
     <form>
-        <div>
-            <label>Company Name: </label>
-            <input type="text" value={user.company} name="company" onChange={handleInput}/>
+        <div className="InputBOX">
+            {/* <label>Company Name: </label> */}
+            <input placeholder='Enter Company Name' type="text" value={user.company} name="company" onChange={handleInput}/>
         </div>
-        <div>
-            <label>Job Title: </label>
-            <input type="text" value={user.jobtitle} name="jobtitle" onChange={handleInput}/>
+        <div className="InputBOX">
+            {/* <label>Job Title: </label> */}
+            <input placeholder='Job Title' type="text" value={user.jobtitle} name="jobtitle" onChange={handleInput}/>
         </div>
 
-        <div>
-            <label>Responsibility: </label>
-            <input type="text" value={user.responsibility} name="responsibility"  onChange={handleInput}/>
+        <div className="InputBOX">
+            {/* <label>Responsibility: </label> */}
+            <input placeholder='Responsibility' type="text" value={user.responsibility} name="responsibility"  onChange={handleInput}/>
         </div>
+        <div className="btnBOX">
+
          <button
           type="submit"
           id="submit-form"
@@ -54,6 +56,7 @@ const WorkExp = () => {
         >
           Save
         </button>
+        </div>
     </form>
 
     </div>
