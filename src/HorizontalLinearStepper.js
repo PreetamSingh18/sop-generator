@@ -18,7 +18,7 @@ import { getCardContentUtilityClass } from '@mui/material';
 // import { makeStyles } from '@mui/material';
 // import { makeStyles } from '@mui/styles/makeStyles';
 
-const steps = ['Personal Information', 'Education', 'Work Experience','SOP Details','Languages','Fee Information'];
+const steps = ['Personal Information', 'Education', 'Work Experience','Others Details','Languages','Fee Information'];
 const stepsNo=[3,6,9,13,17,21];
 
 export default function HorizontalLinearStepper() {
@@ -178,8 +178,8 @@ export default function HorizontalLinearStepper() {
               </Button>
             )} */}
 
-            {/* disabled={activeStep !== count} */}
-            <Button onClick={handleNext} >
+          
+            <Button onClick={handleNext}   disabled={activeStep !== count} >
               {activeStep === steps.length - 1 ? 'Finish' : 'Next'}
             </Button>
           </Box>

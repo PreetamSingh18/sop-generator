@@ -8,11 +8,19 @@
     height: 100vh;
     width: 100%;
 }
-.heading{
-    text-align: center;
-    background-color: aqua;
-    padding: 5px 0px 5px 0px;
+.Navbar{
+    display: flex;
+    height: 7vh;
+    background-color: #15efff;
     margin-bottom: 20px;
+    justify-content: space-evenly;
+    align-items: center;
+}
+ .heading{ 
+    width: 50%;
+} 
+.NavIcons .icons{
+  margin-left: 20px;
 }
 
 .container{
@@ -25,6 +33,13 @@
    border-radius: 16px;
    box-shadow: 
    0 6px 20px rgb(83, 81, 81);
+   position: relative;
+}
+.warning{
+    position: absolute;
+    bottom: 0;
+    padding-bottom: 2px;
+    font-weight: 500;
 }
 .btnBOX{
     text-align: center;
@@ -105,6 +120,11 @@ input:focus {
 .Box1{
 margin: auto;
 }
+.Box1 h6{
+    font-size: 12px;
+    font-weight: 400;
+    color: rgb(223, 18, 18);
+}
 .subheading{
     margin: 2px;
     text-align: center;
@@ -154,37 +174,15 @@ margin: auto;
     margin: auto;
     margin-right: 10px
 }
-/* .MuiButton-colorInherit{
-    color:#6200ee;
-} */
-.css-1e6y48t-MuiButtonBase-root-MuiButton-root{
+/* .css-1e6y48t-MuiButtonBase-root-MuiButton-root{
     background-color:#6200ee;
     color: white;
-}
-
-/* svg.MuiSvgIcon-root.MuiSvgIcon-fontSizeMedium.MuiStepIcon-root.Mui-completed.css-1u4zpwo-MuiSvgIcon-root-MuiStepIcon-root{ */
-/* } */
-/* svg.MuiSvgIcon-root.MuiSvgIcon-fontSizeMedium.MuiStepIcon-root.Mui-completed.css{ */
-/* } */
-/* svg.Mui-completed{
-    color: #5cb85c;
-
 } */
 
+
+
 @media  (max-width: 768px) {
-    /* span.MuiStepLabel-labelContainer.css-1vyamtt-MuiStepLabel-labelContainer{
-        display: none;
-    } */
-    /* span.MuiStepLabel-label.Mui-disabled.css-2fdkz6{ */
-    /* span.MuiStepLabel-label.Mui-active.css-1hv8oq8-MuiStepLabel-label {
-        display: none;
-    }
-    span.MuiStepLabel-label.Mui-disabled.css-1hv8oq8-MuiStepLabel-label{
-display: none;
-    }
-    span.MuiStepLabel-label.Mui-completed.css-1hv8oq8-MuiStepLabel-label{
-        display: none;
-    } */
+  
     .MuiStepLabel-labelContainer span {
         display: none;
     }
@@ -200,6 +198,7 @@ display: none;
 
   }
   @media  (max-width: 540px) {
+   
     input{
         width: 70%;
        }
@@ -222,6 +221,10 @@ display: none;
   }
 
   @media  (max-width: 425px) {
+    .subheading{
+        margin-top: 15px;
+        font-size: 18px;
+    }
     input{
         font-size: 15px;
         width: 85%;

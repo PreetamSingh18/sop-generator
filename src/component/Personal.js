@@ -52,10 +52,10 @@ const Personal = () => {
         <div className="InputBOX">
           {/* <label>Email Id: </label> */}
           <input
-          placeholder="Email Id"
             type="email"
             name="email"
             id="email"
+          placeholder="Email Address"
             value={user.email}
             onChange={handleInput}
             required

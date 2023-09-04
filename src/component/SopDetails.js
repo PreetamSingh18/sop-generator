@@ -36,7 +36,7 @@ const SopDetails = () => {
 
   return (
     <div className="Box1">
-    <h2 className="subheading">SOP Details</h2>
+    <h2 className="subheading">Others Details</h2>
     <form>
         <div className="InputBOX">
             {/* <label> Canada Institute Name: </label> */}

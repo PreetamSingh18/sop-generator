@@ -32,6 +32,7 @@ const WorkExp = () => {
   return (
     <div className="Box1">
     <h2 className="subheading">Work Experience </h2>
+    <h6>Write None if no work experience </h6>
     <form>
         <div className="InputBOX">
             {/* <label>Company Name: </label> */}
