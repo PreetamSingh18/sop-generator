@@ -161,3 +161,72 @@ margin: auto;
     background-color:#6200ee;
     color: white;
 }
+
+
+@media  (max-width: 768px) {
+    span.MuiStepLabel-labelContainer.css-1vyamtt-MuiStepLabel-labelContainer{
+        display: none;
+    }
+
+   input{
+    width: 60%;
+   }
+   .InputBOX select{
+    width: 60%;
+   }
+   .SlideBOX label{
+    width: 20%;
+   }
+
+  }
+  @media  (max-width: 540px) {
+    input{
+        width: 70%;
+       }
+    .InputBOX select{
+        width: 70%;
+       }
+    .SlideBOX label{
+        width: 30%;
+       }
+       .RadioInputs div{
+      margin-left: 10px
+    } 
+    .RadioInputs div input{
+        margin: auto;
+        margin-right: 5px
+    }
+    .RadioInputs label {
+     font-size: 16px;
+    }
+  }
+
+  @media  (max-width: 425px) {
+    input{
+        font-size: 15px;
+        width: 85%;
+       }
+    .InputBOX select{
+        font-size: 15px;
+        width: 85%;
+       }  
+    .SlideBOX{
+        display: block;
+    }
+    .container{
+   width: 85%;
+    }
+    .RadioInputs{
+        display: block;
+        text-align: center;
+    }
+    .RadioInputs div{
+       margin: auto;
+    }
+  }
+  @media  (max-width: 375px){
+    .MuiStep-root.MuiStep-horizontal.css-1bw0nnu-MuiStep-root{
+        padding-right: 0px;
+        padding-left:0px ;
+    }
+}
