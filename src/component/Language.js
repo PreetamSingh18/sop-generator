@@ -1,10 +1,12 @@
 import React, { useContext } from "react";
 import  Slider  from "@mui/material/Slider";
 import { Context } from "../Contexts";
+import { useState } from "react";
 
 const Language = () => {
    const {user,setUser}=useContext(Context);
    const { count, setCount } = useContext(Context);
+   const [isAdding, setIsAdding] = useState(false);
    let name,value;
    const handleInput=(e)=>{
        console.log(e);
@@ -29,6 +31,13 @@ const Language = () => {
     }
 
     if (user.elistening !== "" && user.ereading !== "" && user.espeaking !== "" && user.ewriting!=="") {
+      document.getElementById("submit-form").style.backgroundColor = "green";
+      setIsAdding(true);
+  
+      setTimeout(() => {
+        setIsAdding(false);
+        document.getElementById("submit-form").style.backgroundColor = "#6200ee";
+      }, 1000);
       setCount(4);
     }
     console.log(count);
@@ -98,7 +107,8 @@ const Language = () => {
          {/* <button type='submit' id="save-button">Save</button> */}
         <div className="btnBOX">
 
-         <button
+        <button
+        disabled={isAdding}
           type="submit"
           id="submit-form"
           // onClick={(e) => {
@@ -106,7 +116,12 @@ const Language = () => {
           // }}
           onClick={handleSave}
         >
-          Save
+         {isAdding ? (
+            "Saved"
+          ) : (
+            "Save"
+          )}
+          {/* Save */}
         </button>
         </div>
       </div>

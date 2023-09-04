@@ -1,9 +1,11 @@
 import React, { useContext } from 'react'
 import { Context } from '../Contexts'
+import { useState } from 'react';
 
 const Education = () => {
   const {user,setUser}=useContext(Context);
   const { count, setCount } = useContext(Context);
+  const [isAdding, setIsAdding] = useState(false);
   let name,value;
   const handleInput=(e)=>{
       console.log(e);
@@ -27,6 +29,13 @@ const Education = () => {
       alert("Enter course");
     }
     if (user.education !== "" && user.institute !== "" && user.course !== "") {
+      document.getElementById("submit-form").style.backgroundColor = "green";
+      setIsAdding(true);
+  
+      setTimeout(() => {
+        setIsAdding(false);
+        document.getElementById("submit-form").style.backgroundColor = "#6200ee";
+      }, 1000);
       setCount(1);
     }
     console.log(count);
@@ -58,7 +67,8 @@ const Education = () => {
          {/* <button type='submit' id="save-button">Save</button> */}
         <div className='btnBOX'>
 
-         <button
+        <button
+        disabled={isAdding}
           type="submit"
           id="submit-form"
           // onClick={(e) => {
@@ -66,7 +76,12 @@ const Education = () => {
           // }}
           onClick={handleSave}
         >
-          Save
+         {isAdding ? (
+            "Saved"
+          ) : (
+            "Save"
+          )}
+          {/* Save */}
         </button>
         </div>
     </form>

@@ -1,9 +1,11 @@
 import React, { useContext } from 'react'
 import { Context } from '../Contexts';
+import { useState } from 'react';
 
 const Fee = () => {
     const { count, setCount } = useContext(Context);
  const {user, setUser}=useContext(Context);
+ const [isAdding, setIsAdding] = useState(false);
  let name,value;
  const handleInput=(e)=>{
      console.log(e);
@@ -29,6 +31,13 @@ const Fee = () => {
         alert("Enter GIC Fee")
     }
     if (user.name !== "" && user.feeamount !== "" && user.gic !== "" && user. feegic!=="") {
+      document.getElementById("submit-form").style.backgroundColor = "green";
+      setIsAdding(true);
+  
+      setTimeout(() => {
+        setIsAdding(false);
+        document.getElementById("submit-form").style.backgroundColor = "#6200ee";
+      }, 1000);
       setCount(5);
     }
     console.log(count);
@@ -79,7 +88,8 @@ const Fee = () => {
         </div>
 <div className="btnBOX">
 
- <button
+<button
+        disabled={isAdding}
           type="submit"
           id="submit-form"
           // onClick={(e) => {
@@ -87,7 +97,12 @@ const Fee = () => {
           // }}
           onClick={handleSave}
         >
-          Save
+         {isAdding ? (
+            "Saved"
+          ) : (
+            "Save"
+          )}
+          {/* Save */}
         </button>
 </div>
 

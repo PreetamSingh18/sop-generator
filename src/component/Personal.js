@@ -4,6 +4,7 @@ import { Context } from "../Contexts";
 const Personal = () => {
   const { user, setUser } = useContext(Context);
   const { count, setCount } = useContext(Context);
+  const [isAdding, setIsAdding] = useState(false);
   //   console.log(user);
   let name, value;
   const handleInput = (e) => {
@@ -27,8 +28,16 @@ const Personal = () => {
       alert("Enter Age");
     }
     if (user.name !== "" && user.email !== "" && user.age !== "") {
+      document.getElementById("submit-form").style.backgroundColor = "green";
+      setIsAdding(true);
+  
+      setTimeout(() => {
+        setIsAdding(false);
+        document.getElementById("submit-form").style.backgroundColor = "#6200ee";
+      }, 1000);
       setCount(0);
     }
+    // document.getElementById("submit-form").style.backgroundColor="#764abc";
     console.log(count);
   };
 
@@ -79,6 +88,7 @@ const Personal = () => {
        <div className="btnBOX">
 
         <button
+        disabled={isAdding}
           type="submit"
           id="submit-form"
           // onClick={(e) => {
@@ -86,7 +96,12 @@ const Personal = () => {
           // }}
           onClick={handleSave}
         >
-          Save
+         {isAdding ? (
+            "Saved"
+          ) : (
+            "Save"
+          )}
+          {/* Save */}
         </button>
        </div>
       </form>

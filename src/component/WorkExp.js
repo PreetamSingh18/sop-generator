@@ -1,9 +1,11 @@
 import React, { useContext } from 'react'
 import { Context } from '../Contexts'
+import { useState } from 'react';
 
 const WorkExp = () => {
    const {user, setUser}=useContext(Context);
    const { count, setCount } = useContext(Context);
+   const [isAdding, setIsAdding] = useState(false);
    let name,value;
    const handleInput=(e)=>{
        console.log(e);
@@ -25,6 +27,13 @@ const WorkExp = () => {
       alert("Enter responsibility");
     }
     if (user.company !== "" && user.jobtitle !== "" && user.responsibility !== "") {
+      document.getElementById("submit-form").style.backgroundColor = "green";
+      setIsAdding(true);
+  
+      setTimeout(() => {
+        setIsAdding(false);
+        document.getElementById("submit-form").style.backgroundColor = "#6200ee";
+      }, 1000);
       setCount(2);
     }
     console.log(count);
@@ -48,14 +57,21 @@ const WorkExp = () => {
             <input placeholder='Responsibility' type="text" value={user.responsibility} name="responsibility"  onChange={handleInput}/>
         </div>
         <div className="btnBOX">
-
-         <button
+        <button
+        disabled={isAdding}
           type="submit"
           id="submit-form"
-         
+          // onClick={(e) => {
+          //   handleSave(e);
+          // }}
           onClick={handleSave}
         >
-          Save
+         {isAdding ? (
+            "Saved"
+          ) : (
+            "Save"
+          )}
+          {/* Save */}
         </button>
         </div>
     </form>
